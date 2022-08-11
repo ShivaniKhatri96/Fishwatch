@@ -1,38 +1,62 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body {
+  background-color: #f6eae7;
+}
+.title {
+  margin-top: 1rem;
   text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Satisfy', cursive;
+  font-weight: 700;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0.5rem;
+  width: 20rem;
+  height: 22rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+img {
+  width: 20rem;
+  height: 10rem;
+  border-radius: 0.2rem;
+  object-fit: cover;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
 }
-
-.App-link {
-  color: #61dafb;
+.caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-bottom: 0.5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fishName {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.fishHarvestType {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.info {
+  display: flex;
+  flex-direction: column;
 }
