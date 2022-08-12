@@ -1,12 +1,11 @@
-import React from 'react';
-import GridFish from './components/GridFish';
-import './App.css';
-
+import React from "react";
+import GridFish from "./components/gridFish/GridFish";
+import "./styles/_global.scss";
 function App() {
   return (
     <div>
-      <div className='title'>Fishwatch</div>
-     <GridFish />
+      <div className="title">Fishwatch</div>
+      <GridFish />
     </div>
   );
 }

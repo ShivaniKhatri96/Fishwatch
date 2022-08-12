@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./gridFish.scss";
 const GridFish = () => {
   const [allFishes, setAllFishes] = useState<any[]>([]);
   useEffect(() => {
@@ -14,29 +15,36 @@ const GridFish = () => {
     };
     fetchData();
   }, []);
-  console.log(allFishes);
   return (
     <div className="flex">
       {allFishes.map((fish: any, i) => {
-        let imageGalleries = fish["Image Gallery"];
-        let imageTitle;
-        let imageSrc;
-        let imageAlt;
-        if (imageGalleries != null && imageGalleries.length > 0) {
-          imageSrc = imageGalleries[0].src;
-          imageAlt = imageGalleries[0].alt;
-          imageTitle = imageGalleries[0].title;
-        }
         return (
           <div key={i} className="box">
             <div>
-              <img src={imageSrc} alt={imageAlt} />
+              <img
+                src={fish["Species Illustration Photo"].src}
+                alt={fish["Species Illustration Photo"].alt}
+              />
             </div>
             <div className="contentBox">
-              <div className="caption">Caption: {imageTitle}</div>
+              <div className="caption">
+                Caption:{" "}
+                {fish["Species Illustration Photo"].title
+                  ? fish["Species Illustration Photo"].title
+                  : fish["Species Name"]}
+              </div>
               <div className="fishName">{fish["Species Name"]}</div>
-              <div className="fishHarvestType">
+              <div className="fishInfo">
                 Harvest Type: {fish["Harvest Type"]}
+              </div>
+              <div>
+                <div className="fishInfo">Fun Fact</div>
+                <div className="quoteText">
+                  {fish["Quote"].slice(0, 150)}...
+                </div>
+              </div>
+              <div className="btnGrid">
+                <div className="learnMoreButton">Learn more</div>
               </div>
             </div>
           </div>
