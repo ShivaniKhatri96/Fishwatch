@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { FC } from "react";
 import "./gridFish.scss";
-const GridFish = () => {
-  const [allFishes, setAllFishes] = useState<any[]>([]);
-  useEffect(() => {
-    const url = "https://www.fishwatch.gov/api/species";
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setAllFishes(data);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-    fetchData();
-  }, []);
+
+interface gridFishProps {
+  filteredFishes: any[];
+}
+const GridFish: FC<gridFishProps> = ({ filteredFishes }) => {
   return (
     <div className="flex">
-      {allFishes.map((fish: any, i) => {
+      {filteredFishes.map((fish: any, i) => {
         return (
           <div key={i} className="box">
             <div>
@@ -43,7 +33,7 @@ const GridFish = () => {
                   {fish["Quote"].slice(0, 150)}...
                 </div>
               </div>
-              <div className="btnGrid">
+              <div className="buttonGrid">
                 <div className="learnMoreButton">Learn more</div>
               </div>
             </div>

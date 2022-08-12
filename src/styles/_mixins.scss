@@ -1,0 +1,41 @@
+@import "./variables";
+
+//for mobile to desktop
+@mixin min-xs {
+  @media (min-width: $sx) {
+    @content;
+  }
+}
+@mixin min-sm {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+@mixin min-lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+@mixin min-xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+// for this screen with landscape
+@mixin min-sm-Landscape {
+  @media only screen and (min-width: $sm) and (orientation: landscape) {
+    @content;
+  }
+}
+// for this screen with portrait
+@mixin min-md-portrait {
+  @media only screen and (min-width: $md) and (orientation: portrait) {
+    @content;
+  }
+}

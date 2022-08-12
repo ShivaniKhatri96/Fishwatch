@@ -1,4 +1,41 @@
 @import "./variables";
+@import "./mixins";
 body {
   background-color: $background-color;
+}
+//need to fix this
+.gridSearchSelect {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0 2rem;
+  gap: 0.5rem;
+  @include min-sm {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 5rem;
+  }
+  @include min-md {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    padding-left: 2rem;
+  }
+  @include min-md-portrait {
+    padding-left: 8rem;
+  }
+  @include min-lg {
+    padding-left: 9rem;
+  }
+  @include min-xl {
+    padding: 0 6rem;
+  }
+}
+.title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: "Satisfy", cursive;
+  font-weight: 700;
 }

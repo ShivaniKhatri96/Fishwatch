@@ -1,11 +1,13 @@
 import React from "react";
-import GridFish from "./components/gridFish/GridFish";
+import Article from "./pages/Article";
+import Home from "./pages/Home";
 import "./styles/_global.scss";
 function App() {
   return (
     <div>
-      <div className="title">Fishwatch</div>
-      <GridFish />
+      {/* need to add react router later */}
+      <Home />
+      {/* <Article /> */}
     </div>
   );
 }
