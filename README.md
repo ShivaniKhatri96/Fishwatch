@@ -24,7 +24,7 @@
 - making searchbar and select responsive
 
 ### Assignment four completed
-- assignment four (modified): Clicking on on the button shows more information about the species. The extra information is shown in another page
+- assignment four (modified): Clicking on the button shows more information about the species. The extra information is shown in another page
 
 ### Currently working on 
 - making fish article page responsive

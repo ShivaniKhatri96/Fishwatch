@@ -21,11 +21,19 @@ const Article = () => {
             <div className="articleFlex">
               <div>
                 <div className="paragraghTitle">Population</div>
-                <div>{article["Population"]}</div>
+                <div>
+                  {article["Population"]
+                    ? article["Population"]
+                    : "No information available"}
+                </div>
               </div>
               <div>
                 <div className="paragraghTitle">Habitat Impacts</div>
-                <div>{article["Habitat Impacts"]}</div>
+                <div>
+                  {article["Habitat Impacts"]
+                    ? article["Habitat Impacts"]
+                    : "No information available"}
+                </div>
               </div>
               <div>
                 <div className="paragraghTitle">Quote</div>
