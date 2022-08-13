@@ -18,12 +18,12 @@
   width: 20rem;
   height: 24rem;
   padding-bottom: 1rem;
-  background-color: white;
+  background-color: $white-color;
   border-radius: 0.6rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-img {
+.imgStyle {
   width: 20rem;
   height: 10rem;
   border-radius: 0.2rem;
@@ -64,7 +64,7 @@ img {
   justify-content: flex-start;
   :hover {
     cursor: pointer;
-    background-color: rgb(159, 186, 189);
+    background-color: $button-hover;
   }
 }
 .learnMoreButton {

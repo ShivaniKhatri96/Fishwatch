@@ -4,7 +4,7 @@
 
 ## Tools used
 
-- React, sass, React-select library, and the [fishwatch api](https://www.fishwatch.gov/developers)
+- React, Typescript, Sass, React-select library, and the [fishwatch api](https://www.fishwatch.gov/developers)
 
 ### first assignment completed
 
@@ -23,6 +23,9 @@
 - React-select styles changed
 - making searchbar and select responsive
 
+### Assignment four completed
+- assignment four (modified): Clicking on on the button shows more information about the species. The extra information is shown in another page
+
 ### Currently working on 
-- assignment four
-  Clicking on an individual tile should reveal some more information about the species. You are free to select the way this extra information is shown (e.g. modal, other "page", ..).
+- making fish article page responsive
+

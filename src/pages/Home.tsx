@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import GridFish from "../components/gridFish/GridFish";
 import Searchbar from "../components/searchbar/Searchbar";
 import Select from "react-select";
 import { colorStyles } from "../selectStyles/SelectStyles";
+import Title from "../components/Title";
 const Home = () => {
   const [allFishes, setAllFishes] = useState<any[]>([]);
   const [searchText, setSearchText] = useState<string>("");
@@ -56,12 +57,17 @@ const Home = () => {
   });
   // console.log(allFishes.length);
   // console.log(filteredFishes.length);
+  // console.log(filteredFishes);
   return (
     <div>
-      <div className="title">Fishwatch</div>
+      <Title />
       <div className="gridSearchSelect">
         <Searchbar searchText={searchText} setSearchText={setSearchText} />
-        <Select options={options} onChange={selectedHandler} styles={colorStyles} />
+        <Select
+          options={options}
+          onChange={selectedHandler}
+          styles={colorStyles}
+        />
       </div>
       <GridFish filteredFishes={filteredFishes} />
     </div>
