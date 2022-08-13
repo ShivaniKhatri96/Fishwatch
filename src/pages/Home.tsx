@@ -27,31 +27,34 @@ const Home = () => {
   const selectedHandler = (selectedOption: any) => {
     setSelected(selectedOption.value);
   };
-  console.log(selected);
-  const filteredFishes: any[] = allFishes.filter((fish) => {
-    //   if (searchText === "") {
-    //     return allFishes;
-    //   } else {
-    //     return fish["Species Name"].toLowerCase().includes(searchText);
-    //   }
-    // });
+  // console.log(selected);
 
+  const filteredFishes: any[] = allFishes.filter((fish) => {
     if (searchText === "" && (selected === "" || selected === "any")) {
-      return allFishes;
+      return fish;
+    } else if (
+      searchText.length > 0 &&
+      selected.length > 0 &&
+      selected !== "any"
+    ) {
+      return (
+        fish["Species Name"].toLowerCase().includes(searchText) &&
+        fish["Harvest Type"].toLowerCase().includes(selected)
+      );
+    } else if (
+      searchText.length > 0 &&
+      selected.length > 0 &&
+      selected === "any"
+    ) {
+      return fish["Species Name"].toLowerCase().includes(searchText);
     } else if (searchText.length > 0) {
       return fish["Species Name"].toLowerCase().includes(searchText);
-    } else if (selected.length > 0) {
+    } else if (selected.length > 0 && selected !== "any") {
       return fish["Harvest Type"].toLowerCase().includes(selected);
-     }
-     //I need to figure out a condition when both search and select is used
-     //else if (searchText.length > 0 && selected.length > 0) {
-    //   return (
-    //     fish["Species Name"].toLowerCase().includes(searchText) &&
-    //     fish["Harvest Type"].toLowerCase().includes(selected)
-    //   );
-    // }
+    }
   });
-
+  // console.log(allFishes.length);
+  // console.log(filteredFishes.length);
   return (
     <div>
       <div className="title">Fishwatch</div>

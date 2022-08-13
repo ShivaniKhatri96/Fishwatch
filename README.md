@@ -16,8 +16,13 @@
 
 - search bar that filters various fish based on their species name
 
+### third assignment completed
+
+- A select / dropdown to filter species based on harvest type (Wild, Farmed, or any)
+- filters also search bar and select requirement
+
 ### Currently working on 
-- assignment three: A select / dropdown to filter species based on harvest type (Wild, Farmed, or any)
+- select styles 
 
 ### Next
 - making searchbar and select responsive
