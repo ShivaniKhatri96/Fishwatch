@@ -4,7 +4,7 @@
 
 ## Tools used
 
-- React, sass, React-select library ,and the [fishwatch api](https://www.fishwatch.gov/developers)
+- React, sass, React-select library, and the [fishwatch api](https://www.fishwatch.gov/developers)
 
 ### first assignment completed
 
