@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 .searchbar {
-  width: 100%;
+  width: 90%;
   padding: 0.8rem 1rem;
   border-radius: 0.4rem;
   font-size: 0.8rem;
@@ -9,6 +9,8 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   @include min-sm {
     font-size: 1rem;
-    // width: 100%;
+  }
+  @include min-lg {
+    width: 95%;
   }
 }

@@ -3,7 +3,6 @@
 body {
   background-color: $background-color;
 }
-//need to fix this
 .gridSearchSelect {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -13,22 +12,18 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 5rem;
   }
   @include min-md {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    padding-left: 2rem;
-  }
-  @include min-md-portrait {
-    padding-left: 8rem;
+    padding: 0 4rem;
   }
   @include min-lg {
-    padding-left: 9rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
   }
   @include min-xl {
     padding: 0 6rem;
+    gap: 0.5rem;
   }
 }
 .title {
