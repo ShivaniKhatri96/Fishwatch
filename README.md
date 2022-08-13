@@ -1,6 +1,6 @@
 # fishwatchv2
 
-> I am redoing this assignment for myself just to practice these type of questions in this branch for future reference because I couldn't complete all the assignments during 2.30min time interval. Main branch is the one I did for the take-home assignment.
+> I am redoing this assignment for myself just to practice these type of questions in this branch for future reference because I couldn't complete all the assignments during 2hr30min time interval. Main branch is the one I did for the take-home assignment.
 
 ## Tools used
 
