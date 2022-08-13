@@ -20,11 +20,11 @@
 
 - A select / dropdown to filter species based on harvest type (Wild, Farmed, or any)
 - filters also search bar and select requirement
+- React-select styles changed
 
 ### Currently working on 
-- select styles 
+- making searchbar and select responsive
 
 ### Next
-- making searchbar and select responsive
 - assignment four
   Clicking on an individual tile should reveal some more information about the species. You are free to select the way this extra information is shown (e.g. modal, other "page", ..).

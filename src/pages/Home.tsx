@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import GridFish from "../components/gridFish/GridFish";
 import Searchbar from "../components/searchbar/Searchbar";
 import Select from "react-select";
+import { colorStyles } from "../selectStyles/SelectStyles";
 const Home = () => {
   const [allFishes, setAllFishes] = useState<any[]>([]);
   const [searchText, setSearchText] = useState<string>("");
@@ -60,7 +61,7 @@ const Home = () => {
       <div className="title">Fishwatch</div>
       <div className="gridSearchSelect">
         <Searchbar searchText={searchText} setSearchText={setSearchText} />
-        <Select options={options} onChange={selectedHandler} />
+        <Select options={options} onChange={selectedHandler} styles={colorStyles} />
       </div>
       <GridFish filteredFishes={filteredFishes} />
     </div>
