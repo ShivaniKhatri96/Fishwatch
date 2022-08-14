@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import GridFish from "../components/gridFish/GridFish";
 import Searchbar from "../components/searchbar/Searchbar";
 import Select from "react-select";

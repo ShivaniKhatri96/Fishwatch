@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Article from "./pages/Article";
 import Home from "./pages/Home";
 import "./styles/_global.scss";
@@ -8,10 +8,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/article"
-          element={<Article />}
-        />
+        <Route path="/article" element={<Article />} />
       </Routes>
     </div>
   );

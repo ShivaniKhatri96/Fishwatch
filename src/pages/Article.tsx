@@ -12,11 +12,19 @@ const Article = () => {
         <div className="articleHeading"> {article["Species Name"]}</div>
         <div className="articleBody">
           <div className="articleFirstGrid">
-            <img
-              src={article["Species Illustration Photo"].src}
-              alt={article["Species Illustration Photo"].alt}
-              className="articleImg"
-            />
+            <div className="articleImgBox">
+              <img
+                src={article["Species Illustration Photo"].src}
+                alt={article["Species Illustration Photo"].alt}
+                className="articleImg"
+              />
+              <div className="articleImgCaption">
+                Caption:{" "}
+                {article["Species Illustration Photo"].title
+                  ? article["Species Illustration Photo"].title
+                  : article["Species Name"]}
+              </div>
+            </div>
 
             <div className="articleFlex">
               <div>
@@ -40,12 +48,6 @@ const Article = () => {
                 <div>{article["Quote"]}</div>
               </div>
             </div>
-          </div>
-          <div className="articleImgCaption">
-            Caption:{" "}
-            {article["Species Illustration Photo"].title
-              ? article["Species Illustration Photo"].title
-              : article["Species Name"]}
           </div>
           <div className="articleMiniBox">
             <div>Protein: {article["Protein"]}</div>

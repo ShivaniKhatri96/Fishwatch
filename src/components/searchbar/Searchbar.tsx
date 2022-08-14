@@ -12,7 +12,13 @@ const Searchbar: FC<searchbarProps> = ({ searchText, setSearchText }) => {
   // console.log(searchText);
   return (
     <div>
-      <input type="text" value={searchText} onChange={searchHandler} placeholder="Search based on fish name..." className="searchbar" />
+      <input
+        type="text"
+        value={searchText}
+        onChange={searchHandler}
+        placeholder="Search based on fish name..."
+        className="searchbar"
+      />
     </div>
   );
 };
